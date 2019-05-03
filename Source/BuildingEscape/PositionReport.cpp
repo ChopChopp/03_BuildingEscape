@@ -20,7 +20,8 @@ void UPositionReport::BeginPlay()
 	Super::BeginPlay();
 
 	FString MeshName = GetOwner()->GetName();
-	UE_LOG(LogTemp, Warning, TEXT("Position report for %s"), *MeshName);
+	FString MeshPos = GetOwner()->GetActorLocation().ToString();
+	UE_LOG(LogTemp, Warning, TEXT("%s is at %s"), *MeshName, *MeshPos);
 	
 }
 
